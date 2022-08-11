@@ -40,16 +40,16 @@ Sample `options`:
     "range_a1": "",                           // delimites: A1|A2.
                                               // If not present, prints all sheets
     
-    "page_size": 'A4 (8.27" x 11.69")',       // Allowed values:
-                                              // Letter (8.5" x 11"),
+    "page_size": 'A4 (8.27" x 11.69")',       // Possible values:
+                                              // Letter (8.5" x 11")
                                               // Tabloid (11" x 17")
-                                              // Legal (8.5" x 14"),
+                                              // Legal (8.5" x 14")
                                               // Statement (5.5" x 8.5")
                                               // Executive (7.25" x 10.5")
                                               // Folio (8.5" x 13"),
                                               // A3 (11.569" x 16.54")
                                               // A4 (8.27" x 11.69")
-                                              // A5 (5.83" x 8.27"),
+                                              // A5 (5.83" x 8.27")
                                               // B4 (9.84" x 13.90")
                                               // B5 (6.93" x 9.84")
                                               // Custom size
