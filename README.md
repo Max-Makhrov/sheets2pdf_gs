@@ -26,7 +26,7 @@ Sample `options`:
 {
     
     // General options
-    // .................................................................................................................
+    // .....................................................................................
     "delimiter": "|",    // for parsing lists
     "file_id": "",       // if ommited will try ActiveWorkbook
     "folder_id": "",     // if ommited will save to Root Drive Folder
@@ -34,15 +34,26 @@ Sample `options`:
     
     
     // PDF options
-    // .................................................................................................................
+    // ......................................................................................
     "sheet_names": "Parameters",              // delimited: Sheet1|Sheet2
     
-    "range_a1": "",                           // delimites: A1|A2, if not present, prints all sheets
+    "range_a1": "",                           // delimites: A1|A2.
+                                              // If not present, prints all sheets
     
-    "page_size": 'A4 (8.27" x 11.69")',       // Letter (8.5" x 11"),Tabloid (11" x 17"),Legal (8.5" x 14"),
-                                              // Statement (5.5" x 8.5"),Executive (7.25" x 10.5"),Folio (8.5" x 13"),
-                                              // A3 (11.569" x 16.54"),A4 (8.27" x 11.69"),A5 (5.83" x 8.27"),
-                                              // B4 (9.84" x 13.90"),B5 (6.93" x 9.84"),Custom size,📐Fit to range 
+    "page_size": 'A4 (8.27" x 11.69")',       // Allowed values:
+                                              // Letter (8.5" x 11"),
+                                              // Tabloid (11" x 17")
+                                              // Legal (8.5" x 14"),
+                                              // Statement (5.5" x 8.5")
+                                              // Executive (7.25" x 10.5")
+                                              // Folio (8.5" x 13"),
+                                              // A3 (11.569" x 16.54")
+                                              // A4 (8.27" x 11.69")
+                                              // A5 (5.83" x 8.27"),
+                                              // B4 (9.84" x 13.90")
+                                              // B5 (6.93" x 9.84")
+                                              // Custom size
+                                              // 📐Fit to range
                                               
     "width": "",                              // inches, if page size set to "Custom size"
     "height": "",                             // inches, if page size set to "Custom size"
@@ -52,7 +63,8 @@ Sample `options`:
     "scale": "Normal (100%)",                 // Normal (100%),Fit to width,Fit to height,
                                               // Fit to page,Custom number,To page breaks
                                               
-    "scale_percent": "",                      // Number between 0 and 1, if scale was set to "Custom number"
+    "scale_percent": "",                      // Number between 0 and 1.
+                                              // if scale was set to "Custom number"
     
     "margins": "Wide",                        // Normal,Narrow,Wide,Custom numbers. 
                                               //            Top   Bottom  Left  Rigth
@@ -85,15 +97,16 @@ Sample `options`:
     "show_sheet": false,                      // true,false
     
     // Custom colontitles
-    "colontitles_top_left": "",               // Example: It's Thursday! (parse dates on your side to get more flexible uotput)
+    "colontitles_top_left": "",               // Example: It's Thursday! 
     "colontitles_top_center": "",             // Example: Printed "{{sheet}}" from "{{book}}"
     "colontitles_top_rigth": "",              // Example: Page #{{page}}
     "colontitles_bottom_left": "",            // TODO: is there a way to get total number of pages?
-    "colontitles_bottom_center": "",          // Note: multiline colontitles are not allowes
-    "colontitles_bottom_rigth": "",           // Note: if set, colontitles will show even if all margins = 0
+    "colontitles_bottom_center": "",          // 👉 multiline colontitles are not allowes
+    "colontitles_bottom_rigth": "",           // 👉 if set, colontitles will show even if all margins = 0
+                                              // 👉 parse dates on your side to get more flexible uotput
     
     // Special tags for custom colontitles
-    // .................................................................................................................
+    // ......................................................................................
     "tag_open": "{{",                         // optional, default - {{
     "tag_close": "}}",                        // optional, default - }}
     "call_page_num": "page",                  // optional, default - page
