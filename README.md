@@ -1,7 +1,20 @@
 # sheets2pdf_gs
 Library for converting Google Sheets Into PDF
 
-## Getting the parameters
+## Install
+
+Use library code:
+`under_constryuction`
+
+## Use
+```
+Sheets2Pdf.getBlob(options);
+Sheets2Pdf.save2Drive(options);
+Sheets2Pdf.getUrl(options);
+Sheets2Pdf.getOriginalParameters(options); // for tests
+```
+
+## Get the original parameters
 
 Reproduce the folowing in Chrome:
 
