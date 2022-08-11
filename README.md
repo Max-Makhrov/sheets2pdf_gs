@@ -17,7 +17,7 @@ Live preview:
 Copy sample Sheet with options.
 
 ## Set options
-Options is a plain obhect. 
+Options is a plain object. 
 All parameters have a type `string` or `number`. String parameters are mostly case sensitive.
 Some parameters have long names: `A4 (8.27" x 11.69")`. This is made for direct conversion of user UI values into options. TODO: add ability to use numbers.
 
@@ -25,55 +25,79 @@ Sample `options`:
 ```
 {
     
-    // general options
+    // General options
+    // .................................................................................................................
     "delimiter": "|",    // for parsing lists
     "file_id": "",       // if ommited will try ActiveWorkbook
     "folder_id": "",     // if ommited will save to Root Drive Folder
     
+    
     // PDF options
+    // .................................................................................................................
     "sheet_names": "Parameters",              // delimited: Sheet1|Sheet2
+    
     "range_a1": "",                           // delimites: A1|A2, if not present, prints all sheets
-    "page_size": 'A4 (8.27" x 11.69")',       // Letter (8.5" x 11"),Tabloid (11" x 17"),Legal (8.5" x 14"),Statement (5.5" x 8.5"),
-                                              // Executive (7.25" x 10.5"),Folio (8.5" x 13"),A3 (11.569" x 16.54"),A4 (8.27" x 11.69"),
-                                              // A5 (5.83" x 8.27"),B4 (9.84" x 13.90"),B5 (6.93" x 9.84"),Custom size,📐Fit to range
+    
+    "page_size": 'A4 (8.27" x 11.69")',       // Letter (8.5" x 11"),Tabloid (11" x 17"),Legal (8.5" x 14"),
+                                              // Statement (5.5" x 8.5"),Executive (7.25" x 10.5"),Folio (8.5" x 13"),
+                                              // A3 (11.569" x 16.54"),A4 (8.27" x 11.69"),A5 (5.83" x 8.27"),
+                                              // B4 (9.84" x 13.90"),B5 (6.93" x 9.84"),Custom size,📐Fit to range 
+                                              
     "width": "",                              // inches, if page size set to "Custom size"
     "height": "",                             // inches, if page size set to "Custom size"
+    
     "is_landscape": true,                     // true,false
-    "scale": "Normal (100%)",                 // Normal (100%),Fit to width,Fit to height,Fit to page,Custom number,To page breaks
+    
+    "scale": "Normal (100%)",                 // Normal (100%),Fit to width,Fit to height,
+                                              // Fit to page,Custom number,To page breaks
+                                              
     "scale_percent": "",                      // Number between 0 and 1, if scale was set to "Custom number"
+    
     "margins": "Wide",                        // Normal,Narrow,Wide,Custom numbers. 
                                               //            Top   Bottom  Left  Rigth
                                               // "Normal": [0.75,   0.75,  0.7,  0.7]
                                               // "Wide":   [1,       1,      1,    1]
                                               // "Narrow": [0.75, 0.75,   0.25, 0.25]
+                                              
     "margins_top": "",                        // inches, if margins set to "Custom numbers"
     "margins_bottom": "",                     // inches, if margins set to "Custom numbers"
     "margins_left": "",                       // inches, if margins set to "Custom numbers"
     "margins_rigth": "",                      // inches, if margins set to "Custom numbers"
+    
     "hirizontal_alignment": "Rigth",          // Left,Center,Rigth
     "vertical_alignment": "Bottom",           // Top,Center,Bottom
-    "page_breaks_rows": "8|9|14",
-    "page_breaks_columns": "1|2",
-    "show_gridlines": true,
-    "show_notes": true,
-    "show_page_numbers": true,
-    "repeat_rows": false,
-    "repeat_columns": false,
-    "show_workbook": false,
-    "show_sheet": false,
-    "show_date": false,
-    "show_time": false,
-    "tag_open": "{{",
-    "tag_close": "}}",
-    "call_page_num": "page",
-    "call_sheet": "sheet",
-    "call_workbook": "book",
-    "colontitles_top_left": "",
-    "colontitles_top_center": "",
-    "colontitles_top_rigth": "",
-    "colontitles_bottom_left": "",
-    "colontitles_bottom_center": "",
-    "colontitles_bottom_rigth": ""
+    
+    "page_breaks_rows": "8|9|14",             // delimited: 8|9. Set scale to "To page breaks"
+    "page_breaks_columns": "1|2",             // delimited: 8|9. Set scale to "To page breaks"
+    
+    "show_gridlines": true,                   // true,false       
+    "show_notes": true,                       // true,false
+    
+    "repeat_rows": false,                     // true,false 
+    "repeat_columns": false,                  // true,false
+
+    // Default colontitles
+    "show_date": false,                       // true,false
+    "show_time": false,                       // true,false
+    "show_page_numbers": true,                // true,false
+    "show_workbook": false,                   // true,false
+    "show_sheet": false,                      // true,false
+    
+    // Custom colontitles
+    "colontitles_top_left": "",               // Example: It's Thursday! (parse dates on your side to get more flexible uotput)
+    "colontitles_top_center": "",             // Example: Printed "{{sheet}}" from "{{book}}"
+    "colontitles_top_rigth": "",              // Example: Page #{{page}}
+    "colontitles_bottom_left": "",            // TODO: is there a way to get total number of pages?
+    "colontitles_bottom_center": "",          // Note: multiline colontitles are not allowes
+    "colontitles_bottom_rigth": "",           // Note: if set, colontitles will show even if all margins = 0
+    
+    // Special tags for custom colontitles
+    // .................................................................................................................
+    "tag_open": "{{",                         // optional, default - {{
+    "tag_close": "}}",                        // optional, default - }}
+    "call_page_num": "page",                  // optional, default - page
+    "call_sheet": "sheet",                    // optional, default - sheet
+    "call_workbook": "book"                   // optional, default - book
   }
 ```
 
