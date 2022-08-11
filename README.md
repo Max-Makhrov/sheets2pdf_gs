@@ -4,7 +4,7 @@ Library for converting Google Sheets Into PDF.
 ## Install
 
 Use library code:
-`under_constryuction`
+`under_construction`
 
 ## Use
 ```
