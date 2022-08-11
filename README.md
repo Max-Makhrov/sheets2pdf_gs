@@ -46,7 +46,7 @@ Sample `options`:
                                               // Legal (8.5" x 14")
                                               // Statement (5.5" x 8.5")
                                               // Executive (7.25" x 10.5")
-                                              // Folio (8.5" x 13"),
+                                              // Folio (8.5" x 13")
                                               // A3 (11.569" x 16.54")
                                               // A4 (8.27" x 11.69")
                                               // A5 (5.83" x 8.27")
