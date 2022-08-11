@@ -101,7 +101,7 @@ Sample `options`:
     "colontitles_top_center": "",             // Example: Printed "{{sheet}}" from "{{book}}"
     "colontitles_top_rigth": "",              // Example: Page #{{page}}
     "colontitles_bottom_left": "",            // TODO: is there a way to get total number of pages?
-    "colontitles_bottom_center": "",          // 👉 multiline colontitles are not allowes
+    "colontitles_bottom_center": "",          // 👉 multiline colontitles are not allowed
     "colontitles_bottom_rigth": "",           // 👉 if set, colontitles will show even if all margins = 0
                                               // 👉 parse dates on your side to get more flexible uotput
     
