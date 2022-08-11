@@ -1,5 +1,5 @@
 # sheets2pdf_gs
-Library for converting Google Sheets Into PDF
+Library for converting Google Sheets Into PDF.
 
 ## Install
 
@@ -12,6 +12,57 @@ Sheets2Pdf.getBlob(options);
 Sheets2Pdf.save2Drive(options);
 Sheets2Pdf.getUrl(options);
 Sheets2Pdf.getOriginalParameters(options); // for tests
+```
+Live preview:
+Copy sample Sheet with options.
+
+## Set options
+Sample `options`:
+```
+{
+    // for parsing lists
+    "delimiter": "|",
+    // if ommited will try ActiveWorkbook
+    "file_id": "",
+    
+    "sheet_names": "Parameters",
+    "range_a1": "",
+    "page_size": 'A4 (8.27" x 11.69")',
+    "width": "",
+    "height": "",
+    "is_landscape": true,
+    "scale": "Normal (100%)",
+    "scale_percent": "",
+    "margins": "Wide",
+    "margins_top": "",
+    "margins_bottom": "",
+    "margins_left": "",
+    "margins_rigth": "",
+    "hirizontal_alignment": "Rigth",
+    "vertical_alignment": "Bottom",
+    "page_breaks_rows": "8|9|14",
+    "page_breaks_columns": "1|2",
+    "show_gridlines": true,
+    "show_notes": true,
+    "show_page_numbers": true,
+    "repeat_rows": false,
+    "repeat_columns": false,
+    "show_workbook": false,
+    "show_sheet": false,
+    "show_date": false,
+    "show_time": false,
+    "tag_open": "{{",
+    "tag_close": "}}",
+    "call_page_num": "page",
+    "call_sheet": "sheet",
+    "call_workbook": "book",
+    "colontitles_top_left": "",
+    "colontitles_top_center": "",
+    "colontitles_top_rigth": "",
+    "colontitles_bottom_left": "",
+    "colontitles_bottom_center": "",
+    "colontitles_bottom_rigth": ""
+  }
 ```
 
 ## Get the original parameters
