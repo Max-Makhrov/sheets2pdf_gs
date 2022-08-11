@@ -54,6 +54,8 @@ Sample `options`:
                                               // B5 (6.93" x 9.84")
                                               // Custom size
                                               // 📐Fit to range
+                                              // ...
+                                              // Also possible syntax: WxH in inches: 12.23x10.582
                                               
     "width": "",                              // inches, if page size set to "Custom size"
     "height": "",                             // inches, if page size set to "Custom size"
