@@ -17,29 +17,41 @@ Live preview:
 Copy sample Sheet with options.
 
 ## Set options
+Options is a plain obhect. 
+All parameters have a type `string` or `number`. String parameters are mostly case sensitive.
+Some parameters have long names: `A4 (8.27" x 11.69")`. This is made for direct conversion of user UI values into options. TODO: add ability to use numbers.
+
 Sample `options`:
 ```
 {
-    // for parsing lists
-    "delimiter": "|",
-    // if ommited will try ActiveWorkbook
-    "file_id": "",
     
-    "sheet_names": "Parameters",
-    "range_a1": "",
-    "page_size": 'A4 (8.27" x 11.69")',
-    "width": "",
-    "height": "",
-    "is_landscape": true,
-    "scale": "Normal (100%)",
-    "scale_percent": "",
-    "margins": "Wide",
-    "margins_top": "",
-    "margins_bottom": "",
-    "margins_left": "",
-    "margins_rigth": "",
-    "hirizontal_alignment": "Rigth",
-    "vertical_alignment": "Bottom",
+    // general options
+    "delimiter": "|",    // for parsing lists
+    "file_id": "",       // if ommited will try ActiveWorkbook
+    "folder_id": "",     // if ommited will save to Root Drive Folder
+    
+    // PDF options
+    "sheet_names": "Parameters",              // delimited: Sheet1|Sheet2
+    "range_a1": "",                           // delimites: A1|A2, if not present, prints all sheets
+    "page_size": 'A4 (8.27" x 11.69")',       // Letter (8.5" x 11"),Tabloid (11" x 17"),Legal (8.5" x 14"),Statement (5.5" x 8.5"),
+                                              // Executive (7.25" x 10.5"),Folio (8.5" x 13"),A3 (11.569" x 16.54"),A4 (8.27" x 11.69"),
+                                              // A5 (5.83" x 8.27"),B4 (9.84" x 13.90"),B5 (6.93" x 9.84"),Custom size,📐Fit to range
+    "width": "",                              // inches, if page size set to "Custom size"
+    "height": "",                             // inches, if page size set to "Custom size"
+    "is_landscape": true,                     // true,false
+    "scale": "Normal (100%)",                 // Normal (100%),Fit to width,Fit to height,Fit to page,Custom number,To page breaks
+    "scale_percent": "",                      // Number between 0 and 1, if scale was set to "Custom number"
+    "margins": "Wide",                        // Normal,Narrow,Wide,Custom numbers. 
+                                              //            Top   Bottom  Left  Rigth
+                                              // "Normal": [0.75,   0.75,  0.7,  0.7]
+                                              // "Wide":   [1,       1,      1,    1]
+                                              // "Narrow": [0.75, 0.75,   0.25, 0.25]
+    "margins_top": "",                        // inches, if margins set to "Custom numbers"
+    "margins_bottom": "",                     // inches, if margins set to "Custom numbers"
+    "margins_left": "",                       // inches, if margins set to "Custom numbers"
+    "margins_rigth": "",                      // inches, if margins set to "Custom numbers"
+    "hirizontal_alignment": "Rigth",          // Left,Center,Rigth
+    "vertical_alignment": "Bottom",           // Top,Center,Bottom
     "page_breaks_rows": "8|9|14",
     "page_breaks_columns": "1|2",
     "show_gridlines": true,
