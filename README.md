@@ -30,6 +30,7 @@ Sample `options`:
     "delimiter": "|",    // for parsing lists
     "file_id": "",       // if ommited will try ActiveWorkbook
     "folder_id": "",     // if ommited will save to Root Drive Folder
+    "pdf_name": "",      // if blank, will create name of file name + stamp
     
     
     // PDF options
