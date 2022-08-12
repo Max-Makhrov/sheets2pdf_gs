@@ -4,11 +4,12 @@ Library for converting Google Sheets™ Into PDF.
 Featurs
  * ⚙️ All settings including colontitles = custom headers and footers
  * 🔌All parameters are in single plain object.
+ * 👀 Live preview! Copy sample Sheet (TODO) with UI :)
 
 ## Install
 
 Use library code:
-`under_construction`
+`1_hqx3V0ZI0VOFaeJN0D1qYtdhpCeuC1ct10AnHnnbmDblW8m058hfH5n`
 
 ## Use
 ```
@@ -17,8 +18,6 @@ Sheets2Pdf.save2Drive(options);
 Sheets2Pdf.getUrl(options);
 Sheets2Pdf.getOriginalParameters(options); // for tests
 ```
-Live preview:
-Copy sample Sheet with options.
 
 ## Set options
 Options is a plain object. 
