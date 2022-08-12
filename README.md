@@ -4,7 +4,7 @@ Library for converting Google Sheets™ Into PDF.
 Featurs
  * ⚙️ All PDF settings including colontitles = custom headers and footers.
  * 🔌Input parameters is a single plain object.
- * 👀 Live preview! Copy [sample Sheet]([url](https://docs.google.com/spreadsheets/d/1HwUaZk86BtrPdQ1RYILwTcRwJUUClgqtAPEpMAsX0y8/edit#gid=475497297)) with UI → Go to the menu `⚡ Test Automation > 🍋 Drive > 🍎Print 2 PDF`
+ * 👀 Live preview! Copy [sample Sheet]([url](https://docs.google.com/spreadsheets/d/1HwUaZk86BtrPdQ1RYILwTcRwJUUClgqtAPEpMAsX0y8/edit#gid=475497297) with UI → Go to the menu `⚡ Test Automation > 🍋 Drive > 🍎Print 2 PDF`
 
 ## Install
 
