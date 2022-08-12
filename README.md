@@ -278,3 +278,8 @@ Library of all possible parameters:
   ];
 
 ```
+
+## Author
+@max__makhrov
+
+![CoolTables](https://raw.githubusercontent.com/cooltables/pics/main/logos/ct_logo_small.png) [cooltables.online](https://www.cooltables.online/)
