@@ -134,6 +134,41 @@ Sample `options`:
   }
 ```
 
+## Test
+```
+function myTestDefaults() {
+  var test = Sheets2Pdf.getOriginalParameters({
+     file_id: '1ycWG5XxVK8ZI6MrEiumuNXP9MDvh4dbJbydVWYmaVis',
+     sheet_names: 'Sheet1',
+  });
+  console.log(test);
+}
+
+function myTestBlob() {
+  var blob = Sheets2Pdf.getBlob({
+     file_id: '1ycWG5XxVK8ZI6MrEiumuNXP9MDvh4dbJbydVWYmaVis',
+     sheet_names: 'Sheet1',
+  });
+  console.log(blob.getContentType());
+}
+
+function myTest2Drive() {
+  var test = Sheets2Pdf.save2Drive({
+     file_id: '1ycWG5XxVK8ZI6MrEiumuNXP9MDvh4dbJbydVWYmaVis',
+     sheet_names: 'Sheet1',
+  });
+  console.log(test); // output object
+}
+
+function myTestUrl() {
+  var url = Sheets2Pdf.getUrl({
+     file_id: '1ycWG5XxVK8ZI6MrEiumuNXP9MDvh4dbJbydVWYmaVis',
+     sheet_names: 'Sheet1',
+  });
+  console.log(url);
+}
+```
+
 ## Get the original parameters
 
 Reproduce the folowing in Chrome:
