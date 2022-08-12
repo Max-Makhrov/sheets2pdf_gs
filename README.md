@@ -2,7 +2,7 @@
 Library for converting Google Sheets™ Into PDF. 
 
 Featurs
- * ⚙️ All settings including colontitles = custom headers and footers
+ * ⚙️ All PDF settings including colontitles = custom headers and footers
  * 🔌All parameters are in single plain object.
  * 👀 Live preview! Copy sample Sheet (TODO) with UI :)
 
