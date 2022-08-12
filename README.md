@@ -1,5 +1,9 @@
 # sheets2pdf_gs
-Library for converting Google Sheets Into PDF.
+Library for converting Google Sheets Into PDF. 
+
+Featurs
+ * ⚙️ All settings including custom headers and footers
+ * 🔌All parameters are in single plain object.
 
 ## Install
 
