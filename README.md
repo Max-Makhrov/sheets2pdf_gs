@@ -62,25 +62,42 @@ Sample `options`:
     
     "is_landscape": true,                     // true,false
     
-    "scale": "Normal (100%)",                 // Normal (100%),Fit to width,Fit to height,
-                                              // Fit to page,Custom number,To page breaks
+    "scale": "Normal (100%)",                 // Possible values:
+                                              // Normal (100%)
+                                              // Fit to width
+                                              // Fit to height
+                                              // Fit to page
+                                              // Custom number
+                                              // To page breaks
                                               
     "scale_percent": "",                      // Number between 0 and 1.
                                               // if scale was set to "Custom number"
     
-    "margins": "Wide",                        // Normal,Narrow,Wide,Custom numbers. 
-                                              //            Top   Bottom  Left  Rigth
-                                              // "Normal": [0.75,   0.75,  0.7,  0.7]
-                                              // "Wide":   [1,       1,      1,    1]
-                                              // "Narrow": [0.75, 0.75,   0.25, 0.25]
+    "margins": "Wide",                        // Possible values: 
+                                              // Normal
+                                              // Narrow
+                                              // Wide
+                                              // Custom numbers
+                                              //
+                                              //            Top     Bottom  Left  Rigth
+                                              // "Normal": [0.75,   0.75,   0.7,  0.7]
+                                              // "Wide":   [1,      1,      1,    1]
+                                              // "Narrow": [0.75,   0.75,   0.25, 0.25]
                                               
     "margins_top": "",                        // inches, if margins set to "Custom numbers"
     "margins_bottom": "",                     // inches, if margins set to "Custom numbers"
     "margins_left": "",                       // inches, if margins set to "Custom numbers"
     "margins_rigth": "",                      // inches, if margins set to "Custom numbers"
     
-    "hirizontal_alignment": "Rigth",          // Left,Center,Rigth
-    "vertical_alignment": "Bottom",           // Top,Center,Bottom
+    "hirizontal_alignment": "Rigth",          // Possible values: 
+                                              // Left
+                                              // Center
+                                              // Rigth
+                                              
+    "vertical_alignment": "Bottom",           // Possible values: 
+                                              // Top
+                                              // Center
+                                              // Bottom
     
     "page_breaks_rows": "8|9|14",             // delimited: 8|9. Set scale to "To page breaks"
     "page_breaks_columns": "1|2",             // delimited: 8|9. Set scale to "To page breaks"
