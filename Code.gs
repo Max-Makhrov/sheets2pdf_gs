@@ -78,7 +78,7 @@ var getBlob = function(options) {
  *      file_id: '1ycWG5XxVK8ZI6MrEiumuNXP9MDvh4dbJbydVWYmaVis',
  *      sheet_names: 'Sheet1',
  *   });
- *   console.log(test); // output object
+ *   console.log(JSON.stringify(test)); // output object
  * }
  * ```
  * 
@@ -375,6 +375,27 @@ function getOriginalParameters_(sets) {
   // console.log(i_page_oriantation);
 
   /** 4️⃣ Colontitles */
+  /**
+   * Replace all for ES5 Compatability
+   * https://stackoverflow.com/a/1144788/5372400
+   */
+  var replaceAll_ = function(str, find, replace) {
+    if (!str) {
+      return str;
+    }
+    return str.replace(new RegExp(escapeRegExp_(find), 'g'), replace);
+  }
+  var escapeRegExp_ = function(string) {
+    // $& means the whole matched string
+    if (!string) { return string; }
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); 
+  }
+  /**
+   * starts with for ES5 Compatability
+   */
+  function startsWith_(str, word) {
+      return str.lastIndexOf(word, 0) === 0;
+  }
   var i_colontitles_top = null;
   var i_colontitles_bottom = null;
   /**
@@ -389,7 +410,7 @@ function getOriginalParameters_(sets) {
     sets.tag_close = sets.tag_close || '}}'
     sets.call_page_num = sets.call_page_num || 'page';
     sets.call_sheet = sets.call_sheet || 'sheet';
-    sets.call_workbook = ets.call_workbook || 'book';
+    sets.call_workbook = sets.call_workbook || 'book';
     // var sets = {
     //   tag_open: '{{',
     //   tag_close: '}}',
@@ -406,27 +427,27 @@ function getOriginalParameters_(sets) {
     var Dict = {
       // use TEXT(now(), "YYY-MM-DD hh:mm:ss")
       // call_date: {
-      //   char1: '\u{EE13}',
-      //   char2: '\u{EE14}' 
+      //   char1: '\uEE13',
+      //   char2: '\uEE14' 
       // },
       // call_time: {
-      //   char1: '\u{EE17}',
-      //   char2: '\u{EE18}'
+      //   char1: '\uEE17',
+      //   char2: '\uEE18'
       // },
       call_page_num: {
-        char1: '\u{EE12}'
+        char1: '\uEE12'
       },
       // call_page_num2: {
-      //   char1: '\u{EE15}'
+      //   char1: '\uEE15'
       // },
       // call_page_num3: {
-      //   char1: '\u{EE16}'
+      //   char1: '\uEE16'
       // },
       call_workbook: {
-        char1: '\u{EE10}'
+        char1: '\uEE10'
       },
       call_sheet: {
-        char1: '\u{EE11}'
+        char1: '\uEE11'
       }
     };
     /** 
@@ -434,11 +455,22 @@ function getOriginalParameters_(sets) {
      */
     var getFlatTextParts_ = function(text, open_tag, close_tag) {
       // compose some rare opening and closure
-      var pre = '\\'.repeat(20);
+      var basicText = '\\\\';
+      /**
+       * repeat for ES5 Compatibility
+       */
+      var repeat_ = function(txt, times) {
+        var res = [];
+        for (var i = 0; i < times; i++) {
+          res.push(txt);
+        }
+        return res.join('');
+      }
+      var pre = repeat_(basicText, 20);
       var open = 'open' + pre;
       var close = pre + 'close';
-      text = text.replaceAll(open_tag, open);
-      text = text.replaceAll(close_tag, close);
+      text = replaceAll_(text, open_tag, open);
+      text = replaceAll_(text, close_tag, close);
       var open_re = 'open' + pre + pre;
       var close_re = pre + pre + 'close';
       // compose regex to get what's inside tags
@@ -472,7 +504,7 @@ function getOriginalParameters_(sets) {
       var result ={}, replacewith = ''
       for (var k in Dict) {
       user_key = sets[k];
-        if (text.startsWith(user_key)) {     
+        if (startsWith_(text, user_key)) {     
           parameter = getFlatTextParts_(
             text, 
             sets.parameter_open,
@@ -496,7 +528,7 @@ function getOriginalParameters_(sets) {
     var oreplace = {}, newt = original_t;
     for (var i = 0; i < list_tagged.length; i++) {
       oreplace = getColontitleReplacemant_(list_tagged[i]);
-      newt = newt.replaceAll(
+      newt = replaceAll_(newt,
         oreplace.replace,
         oreplace.replace_with);
     }
