@@ -599,7 +599,7 @@ function getOriginalParameters_(sets) {
         'Wide':   [1, 1, 1, 1]
       },
 
-      hirizontal_alignment: {
+      horizontal_alignment: {
         'Left': 1, // default
         'Center': 2,
         'Rigth': 3
@@ -621,10 +621,10 @@ function getOriginalParameters_(sets) {
     }
     return result;
   }
-  var i_hirizontal_alignment = getCustomOption_(
-    custom_pdf_options.hirizontal_alignment,
-    sets.hirizontal_alignment);
-  // console.log(i_hirizontal_alignment);
+  var i_horizontal_alignment = getCustomOption_(
+    custom_pdf_options.horizontal_alignment,
+    sets.horizontal_alignment);
+  // console.log(i_horizontal_alignment);
   var i_vertical_alignment = getCustomOption_(
     custom_pdf_options.vertical_alignment,
     sets.vertical_alignment);
@@ -849,7 +849,7 @@ function getOriginalParameters_(sets) {
       i_show_colontitles,
       i_colontitles_top,
       i_colontitles_bottom,
-      i_hirizontal_alignment,
+      i_horizontal_alignment,
       i_vertical_alignment
     ],
     [
@@ -867,3 +867,4 @@ function getOriginalParameters_(sets) {
   // logJson_(datajson);
   return data_out;
 }
+
