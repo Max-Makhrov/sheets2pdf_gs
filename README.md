@@ -92,7 +92,7 @@ Sample `options`:
     "margins_left": "",                       // inches, if margins set to "Custom numbers"
     "margins_rigth": "",                      // inches, if margins set to "Custom numbers"
     
-    "hirizontal_alignment": "Rigth",          // Possible values: 
+    "horizontal_alignment": "Rigth",          // Possible values: 
                                               // Left
                                               // Center
                                               // Rigth
