@@ -240,7 +240,7 @@ Library of all possible parameters:
         [ "M/d/yyyy👉🏻 yyyy-MM-dd" ]
       ],
 
-      2, // hirizontal alignment: 1 = left, 2 = rigth, 3 = center
+      2, // horizontal alignment: 1 = left, 2 = rigth, 3 = center
       1  // vertical alignment: 1 = top, 2 = center, 3 = bottom
     ],
     [
